@@ -87,9 +87,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextInputView" destination="cCN-9I-HkA" id="t0i-Nq-ce6"/>
-                        <outlet property="nameTextInputView" destination="IBM-kK-ADH" id="WD6-pf-arR"/>
+                        <outlet property="emailTextInputView" destination="cCN-9I-HkA" id="tMR-dC-Pg0"/>
                         <outlet property="resultLabel" destination="hZo-vi-tvA" id="oZZ-29-NRS"/>
+                        <outletCollection property="textInputViews" destination="IBM-kK-ADH" collectionClass="NSMutableArray" id="9PE-6d-pOL"/>
+                        <outletCollection property="textInputViews" destination="cCN-9I-HkA" collectionClass="NSMutableArray" id="FQM-Ly-9q4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

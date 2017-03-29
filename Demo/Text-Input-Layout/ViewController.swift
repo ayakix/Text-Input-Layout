@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet fileprivate weak var nameTextInputView: TextInputView!
     @IBOutlet fileprivate weak var emailTextInputView: TextInputView!
+    @IBOutlet fileprivate var textInputViews: [TextInputView]!
     @IBOutlet fileprivate weak var resultLabel: UILabel!
 
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func onValidationButtonClick(_ sender: UIButton) {
-        let areValidated = ![nameTextInputView, emailTextInputView].map({ $0.isValidated }).contains(false)
+        let areValidated = !textInputViews.map({ $0.isValidated }).contains(false)
         resultLabel.text = areValidated ? "Validated :)" : "Invalidated :("
     }
 }
