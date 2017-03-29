@@ -23,6 +23,6 @@ class ViewController: UIViewController {
     
     @IBAction private func onValidationButtonClick(_ sender: UIButton) {
         let areValidated = ![nameTextInputView, emailTextInputView].map({ $0.isValidated }).contains(false)
-        resultLabel.text = areValidated ? "Validated:)" : "Invalidated:("
+        resultLabel.text = areValidated ? "Validated :)" : "Invalidated :("
     }
 }
