@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Text_Input_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBM-kK-ADH" customClass="TextInputView" customModule="Text_Input_Layout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="343" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="dCs-tp-SOH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Name"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter your name"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRequired" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Name value is required"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-9I-HkA" customClass="TextInputView" customModule="Text_Input_Layout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="140" width="343" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HX9-9m-Mjh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter your email (not required)"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRequired" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Email value is invalidated"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validated or not" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZo-vi-tvA">
+                                <rect key="frame" x="127" y="264" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="5Zq-G6-zNN"/>
+                                    <constraint firstAttribute="height" constant="21" id="JRd-G4-ezB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-QL-fTA">
+                                <rect key="frame" x="108" y="329" width="159" height="44"/>
+                                <color key="backgroundColor" red="0.11558593336774681" green="0.45179682316898179" blue="0.82357233762741089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4M7-XK-ls0"/>
+                                    <constraint firstAttribute="width" constant="159" id="HQt-F8-Dcl"/>
+                                </constraints>
+                                <state key="normal" title="Validate it">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onValidationButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKd-0o-oBI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cCN-9I-HkA" firstAttribute="top" secondItem="IBM-kK-ADH" secondAttribute="bottom" constant="32" id="5Wy-1J-eE6"/>
+                            <constraint firstItem="IBM-kK-ADH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7sC-z8-PUb"/>
+                            <constraint firstItem="cCN-9I-HkA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mjr-Ar-yKI"/>
+                            <constraint firstItem="IBM-kK-ADH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZoC-YW-2dY"/>
+                            <constraint firstItem="ZGa-QL-fTA" firstAttribute="top" secondItem="hZo-vi-tvA" secondAttribute="bottom" constant="44" id="brw-nP-4Zq"/>
+                            <constraint firstItem="cCN-9I-HkA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cT7-ju-cSx"/>
+                            <constraint firstItem="IBM-kK-ADH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n9k-0o-KCI"/>
+                            <constraint firstItem="ZGa-QL-fTA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ovw-fJ-lVb"/>
+                            <constraint firstItem="hZo-vi-tvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z1S-eC-Z48"/>
+                            <constraint firstItem="hZo-vi-tvA" firstAttribute="top" secondItem="cCN-9I-HkA" secondAttribute="bottom" constant="44" id="zXR-vm-b9C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextInputView" destination="cCN-9I-HkA" id="t0i-Nq-ce6"/>
+                        <outlet property="nameTextInputView" destination="IBM-kK-ADH" id="WD6-pf-arR"/>
+                        <outlet property="resultLabel" destination="hZo-vi-tvA" id="oZZ-29-NRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

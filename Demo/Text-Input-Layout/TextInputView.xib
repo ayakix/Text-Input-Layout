@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputView" customModule="Text_Input_Layout" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="SSD-4x-WbM" id="NL8-wY-AHN"/>
+                <outlet property="requiredLabel" destination="avo-0a-dI8" id="qmS-ek-Olz"/>
+                <outlet property="textField" destination="2IO-Zg-n5M" id="0MN-PE-V7g"/>
+                <outlet property="titleLabel" destination="Dre-hd-z13" id="50D-gT-uDr"/>
+                <outlet property="titleViewWidthConstraint" destination="x5J-PL-4lN" id="gvx-Mw-pEw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-mY-NXd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dre-hd-z13">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45.5" id="x5J-PL-4lN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Required)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avo-0a-dI8">
+                            <rect key="frame" x="56" y="0.0" width="319" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.88443285230000002" green="0.0" blue="0.48005279899999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="R1k-tK-14D"/>
+                    </constraints>
+                </stackView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-----" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2IO-Zg-n5M">
+                    <rect key="frame" x="0.0" y="26" width="375" height="32"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSD-4x-WbM">
+                    <rect key="frame" x="0.0" y="62" width="375" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14.5" id="6Xj-n0-T9K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CwW-mY-NXd" secondAttribute="trailing" id="9qa-fw-BWt"/>
+                <constraint firstItem="SSD-4x-WbM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AyM-kn-9lp"/>
+                <constraint firstItem="CwW-mY-NXd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GLz-9H-aFm"/>
+                <constraint firstAttribute="trailing" secondItem="2IO-Zg-n5M" secondAttribute="trailing" id="V64-Yy-yqB"/>
+                <constraint firstAttribute="bottom" secondItem="SSD-4x-WbM" secondAttribute="bottom" constant="4" id="Vfc-M7-FAr"/>
+                <constraint firstItem="2IO-Zg-n5M" firstAttribute="top" secondItem="CwW-mY-NXd" secondAttribute="bottom" constant="6" id="gZH-02-Qu2"/>
+                <constraint firstItem="2IO-Zg-n5M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ifb-gN-16c"/>
+                <constraint firstItem="SSD-4x-WbM" firstAttribute="top" secondItem="2IO-Zg-n5M" secondAttribute="bottom" constant="4" id="nG2-uy-oie"/>
+                <constraint firstAttribute="trailing" secondItem="SSD-4x-WbM" secondAttribute="trailing" id="qy6-W9-zLI"/>
+                <constraint firstItem="CwW-mY-NXd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tnO-f9-MuX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="55"/>
+        </view>
+    </objects>
+</document>
