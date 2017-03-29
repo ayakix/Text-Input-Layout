@@ -9,7 +9,11 @@ Creating an input form with validation and error indication
 )](http://mit-license.org)
 
 # Overview
-Ω
+<p><img src="https://github.com/ayakix/Text-Input-Layout
+/raw/master/images/animation.gif" alt="animation" width="300"></p>
+
+This is a sample program that creates an input form with validation and error indication like Android's Text Input Layout.
+
 ## Author
 
 **R. Ayakix**
