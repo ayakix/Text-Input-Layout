@@ -115,3 +115,7 @@ class ViewController: UIViewController {
 
 ## サンプル
 [Text-Input-Layout@github](https://github.com/ayakix/Text-Input-Layout)に動作するプロジェクトがあります。
+
+## Android版
+同じような処理をiOSでも実装しています。
+[Validation-Text-Input-Layout@github](https://github.com/ayakix/Validation-Text-Input-Layout) を御覧ください。
